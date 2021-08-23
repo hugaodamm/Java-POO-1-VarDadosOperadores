@@ -3,17 +3,20 @@ package com.company.aula4;
 import java.util.Scanner;
 
 public class Exercicio3 {
-    public static void main(String[] args) {
+        public static void main(String[] args){
 
-        //Corrigido
-        Scanner teclado = new Scanner(System.in);
+            //Corrigido
+            Scanner scan = new Scanner(System.in);
 
-        int DiasTrabalhados = teclado.nextInt();
-        int ValorFixo = 2;
+            int diasTrabalhados = 0;
+            int valorFixo = 2;
 
-        int total = DiasTrabalhados * ValorFixo;
+            System.out.println("Digite o numero de dias da campanha: ");
 
-        System.out.println("Digite o número de dias da campanha: $" + total);
+            diasTrabalhados = scan.nextInt();
 
-    }
+            int total = diasTrabalhados * valorFixo;
+
+            System.out.println("$" + total);
+        }
 }

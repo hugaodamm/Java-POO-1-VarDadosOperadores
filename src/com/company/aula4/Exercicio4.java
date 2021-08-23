@@ -7,29 +7,18 @@ import java.util.Scanner;
 public class Exercicio4 {
     public static void main(String[] args) {
 
-//        int PremioTotal;
-//        double ValorTotal;
-//        float imposto1;
-//        float imposto2;
-//        float imposto3;
-//
-//        ValorTotal = PremioTotal + imposto1;
-//        ValorTotal = PremioTotal + imposto1;
-//        ValorTotal = PremioTotal + imposto1;
+        Scanner scan = new Scanner(System.in);
 
-        Scanner entrada  = new Scanner(System.in);
+        System.out.println("Informe o valor do seu prêmio: ");
 
-        double valorPremio = entrada.nextDouble();
-        double valorImpostos = (2.45d+15d+3d)/100d;
-        double total = valorPremio*valorImpostos;
-        DecimalFormat df = new DecimalFormat(".##");
-        df.setRoundingMode(RoundingMode.CEILING.DOWN);
+        double premioBruto = scan.nextDouble();
+        double imposto1 = (2.45 * premioBruto)/100;
+        double imposto2 = (15 * premioBruto)/100;
+        double imposto3 = (3 * premioBruto)/100;
 
-        System.out.println("Entre o valor do prêmio!");
+        double premioLiquido = premioBruto - imposto1 - imposto2 - imposto3;
 
-        System.out.println(df.format(total));
-
-
+        System.out.println("Com a aplicação das taxas de imposto, o seu prêmio liquído é: " + premioLiquido );
 
     }
 }
